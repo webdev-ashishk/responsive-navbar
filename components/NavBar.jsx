@@ -31,8 +31,8 @@ const NavBar = () => {
         </ul>
       </nav>
       {showMenu && (
-        <div className="fixed inset-x-0 top-24 flex flex-col items-center rounded-lg">
-          <ul className="border-2 w-[200px] bg-blue-800 text-2xl font-bold">
+        <div className="fixed inset-x-0 top-16 flex flex-col items-center rounded-lg">
+          <ul className="border-2 w-full bg-blue-800 text-2xl font-bold">
             <li>home</li>
             <li>about</li>
             <li>contact</li>
