@@ -1,6 +1,13 @@
+"use client";
 import Image from "next/image";
-
+import { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { IoMdClose } from "react-icons/io";
 const NavBar = () => {
+  const [showMenu, setMenu] = useState(false);
+  function toggleMenu() {
+    setMenu(!showMenu);
+  }
   return (
     <div className="border-2 flex justify-between">
       <div className="flex  gap-4 text-5xl m-2 font-bold ">
@@ -23,14 +30,12 @@ const NavBar = () => {
           <li>blogs</li>
         </ul>
       </nav>
-      <div className="sm:block md:block lg:hidden m-3">
-        <Image
-          src="https://static.vecteezy.com/system/resources/previews/021/190/402/original/hamburger-menu-filled-icon-in-transparent-background-basic-app-and-web-ui-bold-line-icon-eps10-free-vector.jpg"
-          alt="menu-icon"
-          height={50}
-          width={50}
-        />
-      </div>
+      <button
+        onClick={toggleMenu}
+        className="sm:block md:block lg:hidden m-3 text-3xl font-bold"
+      >
+        {showMenu ? <IoMdClose /> : <AiOutlineMenu />}
+      </button>
     </div>
   );
 };
