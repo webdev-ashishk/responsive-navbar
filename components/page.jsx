@@ -24,12 +24,22 @@ const NavBar = () => {
 
       <nav className=" lg:block md:hidden sm:hidden flex justify-center items-center m-2">
         <ul className="flex gap-7  text-3xl font-bold">
-          <li>Home1</li>
+          <li>home</li>
           <li>about</li>
           <li>contact</li>
           <li>blogs</li>
         </ul>
       </nav>
+      {showMenu && (
+        <div className="fixed inset-x-0 top-24 flex flex-col items-center rounded-lg">
+          <ul className="border-2 w-[200px] bg-blue-800 text-2xl font-bold">
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+            <li>blogs</li>
+          </ul>
+        </div>
+      )}
       <button
         onClick={toggleMenu}
         className="sm:block md:block lg:hidden m-3 text-3xl font-bold"
