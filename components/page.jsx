@@ -12,7 +12,7 @@ const NavBar = () => {
             width={50}
           />
         </snap>
-        <h1>Tailwinds</h1>1
+        <h1 className="sm:hidden lg:block md:block">Tailwinds</h1>
       </div>
 
       <nav className=" lg:block md:hidden sm:hidden flex justify-center items-center m-2">
@@ -23,10 +23,10 @@ const NavBar = () => {
           <li>blogs</li>
         </ul>
       </nav>
-      <div className="min-[400px]:bg-green-200 sm:block md:block lg:hidden">
+      <div className="sm:block md:block lg:hidden m-3">
         <Image
           src="https://static.vecteezy.com/system/resources/previews/021/190/402/original/hamburger-menu-filled-icon-in-transparent-background-basic-app-and-web-ui-bold-line-icon-eps10-free-vector.jpg"
-          alt="logo"
+          alt="menu-icon"
           height={50}
           width={50}
         />
